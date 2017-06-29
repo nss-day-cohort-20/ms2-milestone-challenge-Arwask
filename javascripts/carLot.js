@@ -25,7 +25,7 @@ var CarLot = (function (globalScopeCarLot) {
   }
   inventory.loadjson = function()
   {
-  inventoryLoader.open("GET", "inventory.json");
+  inventoryLoader.open("GET", "../inventory.json");
   inventoryLoader.send();
   executeAfterLoad();
   }();

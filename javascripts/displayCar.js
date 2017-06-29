@@ -10,22 +10,25 @@ textElement.setAttribute('class', 'col-md-auto');
 navbar.appendChild(textElement);
 var counter = 0;
 let cars = CarLot.Inventory.getCarLot();
-var flag = true;
+var temp;
 dom.displayToDom = function()
 {
 	cars.forEach(function(car)
-	{
-	if(counter%3 === 0)
-		return flag = true;
-	else
-		return flag = false;
+	{	
+		if(counter%3 === 0)
+		{
+			var rowDiv = document.createElement('div');
+			rowDiv.setAttribute('class','row');
+			main.appendChild(rowDiv);
+			temp = rowDiv;
+		}
 	// Beneath that, create a container, block element in your DOM.
 	var subContainer = document.createElement('div');
 	subContainer.setAttribute('class', 'subContainer col-md-3');
 	// subContainer.setAttribute('class', 'col-md-4');
 	subContainer.setAttribute('id', counter);
 	counter++;
-	main.appendChild(subContainer);
+	temp.appendChild(subContainer);
 
 	// Create a DOM element for each of the objects inside the subContainer. Style your person elements however you like.
 	var h1 = document.createElement('h1');
@@ -99,4 +102,5 @@ function toggleBorder(id)
 	}
 }
 globalScopeCarLot.dom = dom;
+return globalScopeCarLot;
 })(CarLot || {});
