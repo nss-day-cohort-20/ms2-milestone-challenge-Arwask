@@ -1,0 +1,23 @@
+.subContainer:nth-child(even)
+{
+	background-color: #FBF598;
+	border: 1px solid black;
+    border-radius: 10px;
+    margin: 30px;
+}
+.subContainer:nth-child(odd)
+{
+	background-color: #A5ADEB;
+	border: 1px solid black;
+    border-radius: 10px;
+    margin: 30px;
+}
+.subContainer img
+{
+	width: 150px;
+	height: 150px;
+}
+.border
+{
+	border: 4px dotted black;
+}

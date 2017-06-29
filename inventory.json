@@ -1,0 +1,53 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Toyota",
+      "model": "Camry",
+      "year": "2008",
+      "price": "9999",
+      "description": "This is an immaculate 2009 Toyota Camry with only 12000 miles on it. Leather seats and non-smoking car."
+    },
+    {
+      "make": "Nissan",
+      "model": "Altima",
+      "year": "2010",
+      "price": "10000",
+      "description": "This is a 2010 Nissan Rogue with only 25000 miles on it. Great price for fairly new model."
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2004",
+      "price": "6999",
+      "description": "This is a 2004 Nissan Rogue with only 40000 miles on it. Leather covered seats and highly maintained."
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    }
+  ]
+}
