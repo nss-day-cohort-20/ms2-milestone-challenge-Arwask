@@ -1,0 +1,60 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "url": "images/nissan-rogue-1.png",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Toyota",
+      "model": "Camry",
+      "url": "images/Toyota-Camry-1.png",
+      "year": "2008",
+      "price": "9999",
+      "description": "This is an immaculate 2009 Toyota Camry with only 12000 miles on it. Leather seats and non-smoking car."
+    },
+    {
+      "make": "Nissan",
+      "model": "Altima",
+      "url":"images/Nissan-Versa-1.png",
+      "year": "2010",
+      "price": "10000",
+      "description": "This is a 2010 Nissan Rogue with only 25000 miles on it. Great price for fairly new model."
+    },
+    {
+      "make": "Nissan",
+      "model": "Versa",
+      "url":"images/nissan-rogue-2.png",
+      "year": "2004",
+      "price": "6999",
+      "description": "This is a 2004 Nissan Rogue with only 40000 miles on it. Leather covered seats and highly maintained."
+    },
+    {
+      "make": "Toyota",
+      "model": "Camry",
+      "url": "images/Toyota-Camry-2.png",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Toyota Camry with only 12000 miles on it. Leather seats and non-smoking car."
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "url":"images/honda-accord-1.png",
+      "year": "2006",
+      "price": "10,999",
+      "description": "This is an all new 2006 Honda Accord with only 15000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "url":"images/Honda-civic-1.png",
+      "year": "2010",
+      "price": "11999",
+      "description": "This is an immaculate 2010 Honda Civic with only 5000 miles on it. Comfortable seats, power steering."
+    }
+  ]
+}
