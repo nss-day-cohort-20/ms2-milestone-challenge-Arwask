@@ -6,7 +6,11 @@ navbar.setAttribute('class','col-md-12');
 var textElement = document.createElement('input');
 textElement.setAttribute('type','text');
 textElement.setAttribute('id','input');
-textElement.setAttribute('class', 'col-md-auto');
+textElement.setAttribute('class', 'col-md-4')
+textElement.setAttribute('placeholder','Your text here!');
+var empty = document.createElement('div')
+empty.setAttribute('class','col-md-4')
+navbar.appendChild(empty);
 navbar.appendChild(textElement);
 var counter = 0;
 let cars = CarLot.Inventory.getCarLot();
@@ -79,7 +83,7 @@ function toggleBorder(id, rowDiv)
 	{
 		var inputText =document.getElementById('input');
 		inputText.focus();
-		inputText.addEventListener("keyup", function()
+		inputText.addEventListener("keydown", function()
 		{
 			if(event.keyCode == 13)
 			{
@@ -100,7 +104,6 @@ function toggleBorder(id, rowDiv)
 						}
 						else
 						{
-							// var msg = "";
 							 msg =inputText.value;
 							 var msgLength = inputText.value.length;
 							 p1[i].innerHTML += msg.charAt(msgLength-1);
