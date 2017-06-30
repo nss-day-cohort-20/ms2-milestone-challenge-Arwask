@@ -34,7 +34,12 @@ dom.displayToDom = function()
 	var header = document.createElement('header');
 	subContainer.appendChild(header);
 	header.innerHTML = `<h3>${car.make}</h3><h4>${car.model}</h4>`;
-	// var imgDiv = document.createElement('div');
+	var imgDiv = document.createElement('div');
+	imgDiv.setAttribute('class','imageDiv');
+	subContainer.appendChild(imgDiv);
+	var img = document.createElement('img');
+	img.setAttribute('src',car.url);
+	imgDiv.appendChild(img);
 	// subContainer.appendChild(h2);
 	// h2.innerHTML = car.model;
 	var p1 = document.createElement('p');
@@ -72,15 +77,16 @@ function toggleBorder(id, rowDiv)
 	thisDiv.classList.toggle('border');
 	if(thisDiv.classList.contains('border'))
 	{
-		document.getElementById('input').focus();
-		document.getElementById('input').addEventListener("keydown", function()
+		var inputText =document.getElementById('input');
+		inputText.focus();
+		inputText.addEventListener("keyup", function()
 		{
 			if(event.keyCode == 13)
 			{
 			// When you press the enter/return key when typing in the input field, then the content of the input field should immediately be blank.
 				document.getElementById('input').value = " ";		
 			}
-			else
+			else if(event.keyCode>31 && event.keyCode<128 || event.keyCode === 8)
 			{
 				for(let i=0; i<cars.length; i++)
 				{
@@ -93,7 +99,12 @@ function toggleBorder(id, rowDiv)
 							p1[i].innerHTML = p1[i].innerHTML.slice(0,-1);
 						}
 						else
-						p1[i].innerHTML += String.fromCharCode(event.keyCode);
+						{
+							// var msg = "";
+							 msg =inputText.value;
+							 var msgLength = inputText.value.length;
+							 p1[i].innerHTML += msg.charAt(msgLength-1);
+						}
 					}
 				}
 			}
