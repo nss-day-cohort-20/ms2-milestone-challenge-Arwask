@@ -31,12 +31,12 @@ dom.displayToDom = function()
 	temp.appendChild(subContainer);
 
 	// Create a DOM element for each of the objects inside the subContainer. Style your person elements however you like.
-	var h1 = document.createElement('h1');
-	subContainer.appendChild(h1);
-	h1.innerHTML = car.make;
-	var h2 = document.createElement('h2');
-	subContainer.appendChild(h2);
-	h2.innerHTML = car.model;
+	var header = document.createElement('header');
+	subContainer.appendChild(header);
+	header.innerHTML = `<h3>${car.make}</h3><h4>${car.model}</h4>`;
+	// var imgDiv = document.createElement('div');
+	// subContainer.appendChild(h2);
+	// h2.innerHTML = car.model;
 	var p1 = document.createElement('p');
 	// p1.setAttribute('class','bio');
 	subContainer.appendChild(p1);
@@ -46,21 +46,25 @@ dom.displayToDom = function()
 	// imageurl.setAttribute("src", persona.image);
 	var article = document.createElement('article')
 	subContainer.appendChild(article);
-	article.innerHTML = `${car.year}-$${car.price}`;
+	article.innerHTML = `<span class="bolder">Model Year:</span>${car.year}`;
+	var article = document.createElement('article')
+	subContainer.appendChild(article);
+	article.innerHTML = `<span class="bolder">Price:</span>$${car.price}`;
 // When you click on one of the person elements, a dotted border should appear around it.
 		subContainer.addEventListener("click", function()
 		{
 			var divId = this.id;
-			toggleBorder(divId);
+			console.log()
+			toggleBorder(divId,rowDiv);
 		})
 })
 }
-function toggleBorder(id)
+function toggleBorder(id, rowDiv)
 {
-	for(let i=0; i<main.childElementCount-1; i++)
-	{
+	for(let i=0; i<cars.length; i++)
+	{	
 		let currentDiv = document.getElementById(i);
-		console.log(currentDiv);
+		// console.log(currentDiv);
 		if(currentDiv.classList.contains('border'))
 			currentDiv.classList.remove('border');
 	}
@@ -69,7 +73,7 @@ function toggleBorder(id)
 	if(thisDiv.classList.contains('border'))
 	{
 		document.getElementById('input').focus();
-		document.getElementById('input').addEventListener("keypress", function()
+		document.getElementById('input').addEventListener("keydown", function()
 		{
 			if(event.keyCode == 13)
 			{
@@ -78,21 +82,20 @@ function toggleBorder(id)
 			}
 			else
 			{
-				for(let i=0; i<main.childElementCount-1; i++)
+				for(let i=0; i<cars.length; i++)
 				{
 					let currentDiv = document.getElementById(i);
-					// console.log(currentDiv);
 					if(currentDiv.classList.contains('border'))
 					{
 						let p1 = document.getElementsByTagName('p');
-						console.log(p1[i]);
-						console.log(p1[i].innerHTML);
+						if(event.keyCode === 8 )
+						{
+							p1[i].innerHTML = p1[i].innerHTML.slice(0,-1);
+						}
+						else
 						p1[i].innerHTML += String.fromCharCode(event.keyCode);
 					}
 				}
-				// console.log(id);
-				
-				// console.log(p1.innerHTML);
 			}
 		})
 	}

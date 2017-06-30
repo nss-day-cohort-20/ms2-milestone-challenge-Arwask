@@ -1,23 +1,36 @@
-.subContainer:nth-child(even)
+body
 {
-	background-color: #FBF598;
-	border: 1px solid black;
-    border-radius: 10px;
-    margin: 30px;
+	font-family: 'Courgette', cursive;
 }
-.subContainer:nth-child(odd)
+.subContainer
 {
-	background-color: #A5ADEB;
+	background-color: #BFC3E3;
 	border: 1px solid black;
     border-radius: 10px;
     margin: 30px;
 }
 .subContainer img
 {
-	width: 150px;
-	height: 150px;
+	width: 100%;
+	height: 100%;
 }
 .border
 {
-	border: 4px dotted black;
+	border: 4px solid black;
+	background-color:#4C5EE8;
+	box-shadow: 10px 10px 5px #888888;
+}
+.bolder
+{
+	font-size: 1.2em;
+	font-weight: 900;
+}
+header
+{
+	width: 100%;
+	display: inline;
+}
+h3 h4
+{
+	width: 50%;
 }
